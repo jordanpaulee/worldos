@@ -1,7 +1,7 @@
 ﻿import { instrumentSchema, type Instrument } from "@chrona/core-schema";
-import records from "../fixtures/prices.json" with { type: "json" };
+import records from "../fixtures/prices.json";
 
-import type { Connector } from "./interface.js";
+import type { Connector } from "./interface";
 
 type PricesFixtureRecord = {
   symbol: string;
