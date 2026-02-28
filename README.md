@@ -1,3 +1,5 @@
+![Project Chrona logo](assets/logo-1.png)
+
 # Project Chrona
 
 AI-native macro intelligence terminal.
