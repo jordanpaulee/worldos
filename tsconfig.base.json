@@ -1,4 +1,4 @@
-{
+﻿{
   "compilerOptions": {
     "target": "ES2022",
     "module": "NodeNext",
@@ -13,16 +13,16 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@worldos/core-schema": [
+      "@chrona/core-schema": [
         "packages/core-schema/src"
       ],
-      "@worldos/source-registry": [
+      "@chrona/source-registry": [
         "packages/source-registry/src"
       ],
-      "@worldos/connectors": [
+      "@chrona/connectors": [
         "packages/connectors/src"
       ],
-      "@worldos/db": [
+      "@chrona/db": [
         "packages/db/src"
       ]
     }

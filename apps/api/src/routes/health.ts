@@ -1,9 +1,9 @@
-import type { FastifyInstance } from "fastify";
+﻿import type { FastifyInstance } from "fastify";
 import { z } from "zod";
 
 const healthResponseSchema = z.object({
   status: z.literal("ok"),
-  service: z.literal("worldos-api"),
+  service: z.literal("chrona-api"),
   version: z.string(),
 });
 
@@ -13,7 +13,7 @@ export const registerHealthRoutes = (server: FastifyInstance) => {
   server.get<{ Reply: HealthResponse }>("/health", async () =>
     healthResponseSchema.parse({
       status: "ok",
-      service: "worldos-api",
+      service: "chrona-api",
       version: "0.1-alpha",
     }),
   );

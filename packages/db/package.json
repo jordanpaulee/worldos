@@ -1,5 +1,5 @@
-{
-  "name": "@worldos/db",
+﻿{
+  "name": "@chrona/db",
   "private": true,
   "version": "0.1.0-alpha",
   "type": "module",
@@ -12,9 +12,10 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "tsc --noEmit -p tsconfig.json",
-    "test": "node -e \"console.log('No tests yet for @worldos/db')\""
+    "test": "node -e \"console.log('No tests yet for @chrona/db')\""
   },
   "devDependencies": {
+    "@types/node": "^22.13.8",
     "typescript": "^5.7.3"
   }
 }

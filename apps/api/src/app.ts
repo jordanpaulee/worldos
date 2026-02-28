@@ -1,5 +1,5 @@
-import Fastify from "fastify";
-import { getMacroCalendarConnector, getPricesConnector } from "@worldos/connectors";
+﻿import Fastify from "fastify";
+import { getMacroCalendarConnector, getPricesConnector } from "@chrona/connectors";
 
 import { registerBriefingRoutes } from "./routes/briefing.js";
 import { registerEventRoutes } from "./routes/events.js";
@@ -11,7 +11,7 @@ export const buildApi = () => {
     logger: true,
   });
 
-  server.decorate("worldos", {
+  server.decorate("chrona", {
     pricesConnector: getPricesConnector(),
     macroConnector: getMacroCalendarConnector(),
   });

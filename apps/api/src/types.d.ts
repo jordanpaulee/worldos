@@ -1,9 +1,9 @@
-import type { Event, Instrument } from "@worldos/core-schema";
+﻿import type { Event, Instrument } from "@chrona/core-schema";
 import "fastify";
 
 declare module "fastify" {
   interface FastifyInstance {
-    worldos: {
+    chrona: {
       pricesConnector: {
         fetch: () => Promise<Instrument[]>;
       };

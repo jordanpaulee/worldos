@@ -1,7 +1,7 @@
-import { eventSchema, type Event } from "@worldos/core-schema";
-import records from "../fixtures/macro-calendar.json";
+﻿import { eventSchema, type Event } from "@chrona/core-schema";
+import records from "../fixtures/macro-calendar.json" with { type: "json" };
 
-import type { Connector } from "./interface";
+import type { Connector } from "./interface.js";
 
 type MacroFixtureRecord = {
   id: string;

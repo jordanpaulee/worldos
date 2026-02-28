@@ -1,18 +1,18 @@
-{
-  "name": "@worldos/ui",
+﻿{
+  "name": "@chrona/ui",
   "private": true,
   "version": "0.1.0-alpha",
   "scripts": {
     "dev": "next dev --port 3000",
     "build": "next build",
     "lint": "tsc --noEmit -p tsconfig.json",
-    "test": "node -e \"console.log('No tests yet for @worldos/ui')\""
+    "test": "node -e \"console.log('No tests yet for @chrona/ui')\""
   },
   "dependencies": {
     "@radix-ui/react-separator": "^1.1.2",
     "@tanstack/react-query": "^5.66.0",
-    "@worldos/connectors": "workspace:*",
-    "@worldos/core-schema": "workspace:*",
+    "@chrona/connectors": "workspace:*",
+    "@chrona/core-schema": "workspace:*",
     "clsx": "^2.1.1",
     "echarts": "^5.6.0",
     "echarts-for-react": "^3.0.2",

@@ -1,3 +1,3 @@
-export { getMacroCalendarConnector } from "./connectors/macro-calendar";
-export { getPricesConnector } from "./connectors/prices";
-export type { Connector } from "./connectors/interface";
+export { getMacroCalendarConnector } from "./connectors/macro-calendar.js";
+export { getPricesConnector } from "./connectors/prices.js";
+export type { Connector } from "./connectors/interface.js";

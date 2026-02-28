@@ -1,6 +1,6 @@
-import { createHash } from "node:crypto";
+﻿import { createHash } from "node:crypto";
 import type { Job } from "bullmq";
-import { getMacroCalendarConnector } from "@worldos/connectors";
+import { getMacroCalendarConnector } from "@chrona/connectors";
 
 export const processMacroIngest = async (job: Job<{ cycleKey: string }>) => {
   const connector = getMacroCalendarConnector();
