@@ -6,8 +6,11 @@ export default async function InstrumentsPage() {
   return (
     <section className="space-y-6">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-[0.3em] text-accent">Instruments</p>
-        <h1 className="text-3xl font-semibold text-ink">Alpha ETF watchlist</h1>
+        <p className="text-xs uppercase tracking-[0.3em] text-accent">Watchlist</p>
+        <h1 className="text-3xl font-semibold text-ink">Tracked targets for market-impact monitoring</h1>
+        <p className="max-w-3xl text-sm text-slate-300">
+          These are the broad, sector, and macro-sensitive instruments WorldOS uses to anchor early impact reads.
+        </p>
       </header>
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {dashboard.instruments.map((instrument) => (

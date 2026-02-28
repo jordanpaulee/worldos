@@ -2,15 +2,15 @@ import Link from "next/link";
 import { Separator } from "@radix-ui/react-separator";
 
 const navigation = [
-  { href: "/", label: "Timeline" },
+  { href: "/", label: "Dashboard" },
   { href: "/briefing/daily", label: "Daily Briefing" },
-  { href: "/instruments", label: "Instruments" }
+  { href: "/instruments", label: "Watchlist" }
 ];
 
 const inspectorNotes = [
   "Using sample ETF data for now.",
   "Economic event feed is a placeholder and can be swapped later.",
-  "API and worker layers share normalized schemas from @worldos/core-schema."
+  "Shared schemas now cover events, features, signals, and watchlist impact."
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -19,9 +19,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <div className="grid min-h-[calc(100vh-2rem)] gap-4 lg:grid-cols-[240px_minmax(0,1fr)_320px]">
         <aside className="rounded-[32px] border border-white/10 bg-panel p-6 shadow-soft">
           <p className="text-xs uppercase tracking-[0.35em] text-accent">WorldOS</p>
-          <h1 className="mt-3 text-2xl font-semibold text-ink">Public world graph</h1>
+          <h1 className="mt-3 text-2xl font-semibold text-ink">World events, markets, and signals</h1>
           <p className="mt-3 text-sm text-slate-300">
-            Early version focused on core data flow for event ingestion, normalization, and overlay analysis.
+            Early version focused on turning public events into watchlist context, explainable market impact, and
+            reusable signal data.
           </p>
 
           <nav className="mt-8 space-y-2">
@@ -42,11 +43,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </main>
 
         <aside className="rounded-[32px] border border-white/10 bg-panel p-6 shadow-soft">
-          <p className="text-xs uppercase tracking-[0.35em] text-warning">Inspector</p>
-          <h2 className="mt-3 text-xl font-semibold text-ink">Alpha constraints</h2>
+          <p className="text-xs uppercase tracking-[0.35em] text-warning">How To Read This</p>
+          <h2 className="mt-3 text-xl font-semibold text-ink">What this alpha proves</h2>
           <p className="mt-3 text-sm text-slate-300">
-            No prediction engine, no heavy modeling, no globe. The current shape exists to prove the ingestion-to-UI
-            spine.
+            WorldOS is not forecasting yet. This build proves the path from source intake to normalized events,
+            watchlist context, and explainable impact previews.
           </p>
           <Separator className="my-6 h-px w-full bg-white/10" />
           <div className="space-y-4">

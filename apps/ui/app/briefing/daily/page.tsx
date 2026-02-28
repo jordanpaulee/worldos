@@ -7,7 +7,7 @@ export default async function DailyBriefingPage() {
     <section className="space-y-6">
       <header className="space-y-2">
         <p className="text-xs uppercase tracking-[0.3em] text-accent">Daily Briefing</p>
-        <h1 className="text-3xl font-semibold text-ink">Today&apos;s market-aware public world signal snapshot</h1>
+        <h1 className="text-3xl font-semibold text-ink">Today&apos;s market-aware public event snapshot</h1>
         <p className="max-w-3xl text-sm text-slate-300">{briefing.lead}</p>
       </header>
 
