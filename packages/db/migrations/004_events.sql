@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS events (
+  id TEXT PRIMARY KEY,
+  type TEXT NOT NULL,
+  title TEXT NOT NULL,
+  summary TEXT NOT NULL,
+  occurred_at TIMESTAMPTZ NOT NULL,
+  importance TEXT NOT NULL,
+  source_id TEXT NOT NULL REFERENCES sources(id),
+  tags JSONB NOT NULL DEFAULT '[]'::JSONB,
+  metadata JSONB NOT NULL DEFAULT '{}'::JSONB,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

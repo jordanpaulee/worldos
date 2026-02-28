@@ -1,0 +1,21 @@
+sources:
+  - id: market-prices
+    name: Market Prices Fixture
+    category: market-data
+    provider: fixture-json
+    compliance:
+      access: public
+      license: internal-placeholder
+      pii: false
+      retention: rolling-30d
+      termsUrl: https://example.com/market-prices-terms
+  - id: macro-calendar
+    name: Macro Calendar Fixture
+    category: macro-calendar
+    provider: placeholder-provider
+    compliance:
+      access: public
+      license: internal-placeholder
+      pii: false
+      retention: rolling-90d
+      termsUrl: https://example.com/macro-calendar-terms

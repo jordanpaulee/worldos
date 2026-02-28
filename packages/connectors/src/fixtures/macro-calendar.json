@@ -1,0 +1,34 @@
+[
+  {
+    "id": "event-cpi-us",
+    "title": "US CPI Release",
+    "summary": "Placeholder macro release event for inflation tracking.",
+    "occurredAt": "2026-02-10T13:30:00.000Z",
+    "importance": "high",
+    "country": "US"
+  },
+  {
+    "id": "event-fomc-minutes",
+    "title": "FOMC Minutes",
+    "summary": "Placeholder central bank communication event.",
+    "occurredAt": "2026-02-18T19:00:00.000Z",
+    "importance": "high",
+    "country": "US"
+  },
+  {
+    "id": "event-eurozone-pmi",
+    "title": "Eurozone PMI Flash",
+    "summary": "Placeholder survey release for growth monitoring.",
+    "occurredAt": "2026-02-23T09:00:00.000Z",
+    "importance": "medium",
+    "country": "EU"
+  },
+  {
+    "id": "event-boj-briefing",
+    "title": "BoJ Policy Briefing",
+    "summary": "Placeholder policy communication event for Asia session context.",
+    "occurredAt": "2026-02-26T03:00:00.000Z",
+    "importance": "medium",
+    "country": "JP"
+  }
+]

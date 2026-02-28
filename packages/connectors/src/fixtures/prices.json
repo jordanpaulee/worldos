@@ -1,0 +1,17 @@
+[
+  { "symbol": "SPY", "name": "SPDR S&P 500 ETF Trust", "latestPrice": 598.42, "changePct": 0.44, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "QQQ", "name": "Invesco QQQ Trust", "latestPrice": 531.18, "changePct": 0.58, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "IWM", "name": "iShares Russell 2000 ETF", "latestPrice": 227.13, "changePct": -0.21, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "XLE", "name": "Energy Select Sector SPDR Fund", "latestPrice": 97.61, "changePct": 0.73, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "XLF", "name": "Financial Select Sector SPDR Fund", "latestPrice": 48.09, "changePct": 0.11, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "XLK", "name": "Technology Select Sector SPDR Fund", "latestPrice": 233.54, "changePct": 0.67, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "XLI", "name": "Industrial Select Sector SPDR Fund", "latestPrice": 132.91, "changePct": 0.18, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "XLY", "name": "Consumer Discretionary Select Sector SPDR Fund", "latestPrice": 211.44, "changePct": -0.08, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "XLP", "name": "Consumer Staples Select Sector SPDR Fund", "latestPrice": 84.72, "changePct": 0.16, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "XLV", "name": "Health Care Select Sector SPDR Fund", "latestPrice": 149.68, "changePct": -0.05, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "TLT", "name": "iShares 20+ Year Treasury Bond ETF", "latestPrice": 94.27, "changePct": -0.32, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "UUP", "name": "Invesco DB US Dollar Index Bullish Fund", "latestPrice": 31.42, "changePct": 0.09, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "GLD", "name": "SPDR Gold Shares", "latestPrice": 244.37, "changePct": 0.27, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "USO", "name": "United States Oil Fund", "latestPrice": 83.12, "changePct": 1.02, "asOf": "2026-02-27T21:00:00.000Z" },
+  { "symbol": "VIX", "name": "CBOE Volatility Index Proxy", "latestPrice": 16.84, "changePct": -2.13, "asOf": "2026-02-27T21:00:00.000Z" }
+]

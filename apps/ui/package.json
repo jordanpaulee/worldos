@@ -1,0 +1,33 @@
+{
+  "name": "@worldos/ui",
+  "private": true,
+  "version": "0.1.0-alpha",
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "test": "node -e \"console.log('No tests yet for @worldos/ui')\""
+  },
+  "dependencies": {
+    "@radix-ui/react-separator": "^1.1.2",
+    "@tanstack/react-query": "^5.66.0",
+    "@worldos/connectors": "workspace:*",
+    "@worldos/core-schema": "workspace:*",
+    "clsx": "^2.1.1",
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.2",
+    "next": "^15.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.8",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  }
+}
