@@ -2,9 +2,17 @@
 
 # Project Chrona
 
-AI-native macro intelligence terminal.
+Macro Intelligence Research Terminal
 
-Chrona is a time-aware market intelligence system that ingests public macro, financial, and event-driven signals and produces structured, scored insights for daily and intraday awareness.
+## Overview
+
+Project Chrona is a portfolio research project exploring structured macro and market context modeling.
+
+It is a time-aware system that ingests public macroeconomic, financial, and event-driven data and transforms it into structured, scored context for daily and intraday awareness.
+
+Chrona is not a production trading system. It is an architecture-first experiment in modeling how public signals relate to instruments, catalysts, and recurring market behavior.
+
+The goal is to explore whether structured macro context can be made operationally useful before attempting predictive forecasting.
 
 ![Project Chrona dashboard overview](assets/chrona-dashboard-1.png)
 
@@ -13,47 +21,52 @@ Chrona is a time-aware market intelligence system that ingests public macro, fin
 ## Positioning
 
 Chrona is not:
-- a trading bot
-- a scraping toy
-- a feed aggregator
+- an execution engine
+- an automated trading system
+- a retail signal feed
+- a scraping experiment
 
 Chrona is:
-- a temporal signal engine
-- a structured catalyst model
-- a briefing generator
-- a correlation memory system
+- a temporal signal modeling experiment
+- a structured catalyst mapping system
+- a macro briefing generator
+- a research prototype for contextual market reasoning
 
 ## Current Functionality
 
-The current repo is an architecture-first alpha focused on:
+The current repository represents an early alpha architecture focused on:
 - ingesting fixture-backed macro calendar and market price data
 - normalizing events, instruments, impacts, features, and signals through shared schemas
 - exposing API routes for health, events, instruments, and briefing data
-- rendering a UI for watchlist impact preview, recent events, and signal scaffolding
+- rendering a UI for watchlist impact preview and signal scaffolding
 - supporting background worker infrastructure for ingestion-oriented flows
 
-Today, Chrona is a structured macro intelligence prototype, not a finished forecasting system.
-
-## Architecture
-
-The current repository is organized as a small monorepo:
-- `apps/api`: Fastify API for health, events, instruments, and briefing endpoints
-- `apps/ui`: Next.js interface for dashboard, watchlist impact preview, and briefing views
-- `apps/workers`: background ingestion and processing workers
-- `packages/core-schema`: shared schemas and domain types
-- `packages/connectors`: source connectors for macro calendar and price inputs
-- `packages/source-registry`: source registry definitions
-- `packages/db`: database defaults and migration references
+At present, Chrona operates primarily on local fixture data and is designed to test structure, not to deliver production-grade forecasting.
 
 ## System Framing
 
-Chrona ingests public signals, normalizes them into structured event and market objects, computes reusable features, and assembles scored views that can be used for:
+Chrona ingests public macro and market signals and transforms them into structured event and instrument models.
+
+From those models, it computes reusable features and assembles scored views that can support:
 - daily briefings
 - intraday change detection
 - catalyst-to-watchlist mapping
-- persistent context across events, instruments, and prior signal behavior
+- persistent contextual memory across events and instruments
 
-The intent is operational awareness and structured reasoning around macro and market context, not automated execution.
+The emphasis is on explainable structure and reusable reasoning primitives rather than automated execution.
+
+## Architecture
+
+Chrona is organized as a small monorepo:
+- `apps/api` - Fastify API exposing health, events, instruments, and briefing endpoints
+- `apps/ui` - Next.js interface for dashboard and watchlist impact views
+- `apps/workers` - background ingestion and processing workers
+- `packages/core-schema` - shared schemas and domain types
+- `packages/connectors` - source connectors for macro calendar and price inputs
+- `packages/source-registry` - registry definitions for data sources
+- `packages/db` - database defaults and migration references
+
+The project prioritizes schema clarity and separation of concerns to support future experimentation.
 
 ## Tech Stack
 
@@ -85,14 +98,15 @@ The intent is operational awareness and structured reasoning around macro and ma
 
 ## Intended Direction
 
-Chrona is being built toward:
-- daily macro and market briefings
+Chrona is being developed as a research platform for:
+- structured macro and market briefings
 - intraday awareness updates
-- structured catalyst scoring
-- persistent memory across events, instruments, and signals
-- better operator visibility into why something may matter before attempting to forecast what happens next
+- catalyst scoring experimentation
+- persistent memory across signals and instruments
 
-That direction is intentional, but the current codebase is still early and uses local fixture data in key places.
+If the modeling approach proves useful, it may evolve into a usable intelligence tool.
+
+For now, it remains a systems and research build focused on exploring macro context modeling and explainable signal generation.
 
 ## Status
 
@@ -102,8 +116,8 @@ Current state:
 - architecture-first monorepo
 - fixture-backed connectors
 - API, UI, and worker scaffolding in place
-- signal and impact views implemented as alpha product shape
-- forecasting and model-driven ranking not yet production-real
+- early signal and impact views implemented
+- forecasting and model-driven ranking not yet production-grade
 
 ## Development
 
@@ -123,4 +137,6 @@ pnpm dev
 
 ## Notes
 
-This is a personal systems and product build focused on macro intelligence infrastructure, structured market context, and explainable signal generation.
+Project Chrona is a personal portfolio and research build exploring structured macro intelligence infrastructure.
+
+It is intended to demonstrate systems design, typed schema modeling, ingestion pipelines, and explainable signal scaffolding - with the possibility of evolving into a practical tool if the underlying approach proves valuable.
