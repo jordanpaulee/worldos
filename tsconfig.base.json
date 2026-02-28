@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@worldos/core-schema": [
+        "packages/core-schema/src"
+      ],
+      "@worldos/source-registry": [
+        "packages/source-registry/src"
+      ],
+      "@worldos/connectors": [
+        "packages/connectors/src"
+      ],
+      "@worldos/db": [
+        "packages/db/src"
+      ]
+    }
+  }
+}
