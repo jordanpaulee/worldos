@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import ReactECharts from "echarts-for-react";
 
@@ -142,7 +142,7 @@ export function TimelineChart({ points }: { points: ImpactPreviewPoint[] }) {
       padding: 10,
       backgroundColor: "rgba(3,10,20,0.985)",
       borderColor: "rgba(105,210,177,0.35)",
-      className: "worldos-echart-tooltip",
+      className: "chrona-echart-tooltip",
       extraCssText: `
         max-width: 420px;
         white-space: normal;

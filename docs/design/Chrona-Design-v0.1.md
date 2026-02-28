@@ -1,16 +1,16 @@
-# **WorldOS Design Doc v0.4**
+# **Chrona Design Doc v0.1**
 
 ## **Financial-Aware Public World Intelligence Graph (Open Source, Infrastructure-First)**
 
 ### **Status**
 
-Draft v0.4 — “think big, ship v0.1” plan
+Draft v0.1 for the Chrona fork.
 
 ---
 
 ## **1\) Purpose**
 
-WorldOS is an open-source platform that ingests public data streams, normalizes them into a time-aware entity/event graph, computes features, and surfaces **ranked, evidence-backed insights** through:
+Chrona is an open-source platform that ingests public data streams, normalizes them into a time-aware entity/event graph, computes features, and surfaces **ranked, evidence-backed insights** through:
 
 * **Daily briefing** (scheduled, curated, narrative \+ charts)
 
@@ -18,7 +18,7 @@ WorldOS is an open-source platform that ingests public data streams, normalizes 
 
 * **WorldView UI** (Palantir/WorldView-like interface for spatial \+ multi-domain layers)
 
-WorldOS is not a trading bot and does not provide financial advice. It is a **research and situational awareness substrate** for public signals and their historical relationships to market behavior.
+Chrona is not a trading bot and does not provide financial advice. It is a **research and situational awareness substrate** for public signals and their historical relationships to market behavior.
 
 ---
 
@@ -36,7 +36,7 @@ WorldOS is not a trading bot and does not provide financial advice. It is a **re
 
 * Prefer licensed feeds, official APIs, RSS/Atom, public datasets.
 
-* If a source forbids scraping/redistribution, WorldOS either:
+* If a source forbids scraping/redistribution, Chrona either:
 
   * does not ingest it, or
 
@@ -64,7 +64,7 @@ A structured report answering:
 
 * What world events likely mattered (with citations/provenance)?
 
-* What signals are currently “elevated” based on WorldOS features?
+* What signals are currently “elevated” based on Chrona features?
 
 * What comparable historical episodes exist?
 
@@ -96,7 +96,7 @@ A unified operating picture:
 
 ## **4\) Scope Strategy**
 
-WorldOS starts **finance-first** because markets provide objective targets and feedback loops. The platform is designed to expand into broader “world app” capabilities (news/weather/traffic hubs) without rewriting core infrastructure.
+Chrona starts **finance-first** because markets provide objective targets and feedback loops. The platform is designed to expand into broader “world app” capabilities (news/weather/traffic hubs) without rewriting core infrastructure.
 
 ---
 
@@ -679,7 +679,7 @@ Deliver a working substrate that produces:
 
 ## **16\) Repository Layout (recommended)**
 
-worldos/  
+chrona/  
  apps/  
    api/  
    ui-terminal/  
@@ -789,7 +789,7 @@ If adoption \+ contributions is primary:
 
 ### **(Palantir-Style Design \+ High-Throughput Public Data Engine)**
 
-This appendix defines the technical stack and infrastructure decisions for WorldOS v0.1, optimized for:
+This appendix defines the technical stack and infrastructure decisions for Chrona v0.1, optimized for:
 
 * High information density (Foundry-like UX)
 
@@ -1119,7 +1119,7 @@ No duplicate logic.
 
 # **A.10 Monorepo Structure**
 
-worldos/  
+chrona/  
  apps/  
    api/  
    ui-terminal/  
@@ -1218,7 +1218,7 @@ To emulate Palantir-style UX:
 
 * Map, graph, and table interconnected.
 
-WorldOS should feel like:
+Chrona should feel like:
 
 A serious operational system, not a dashboard.
 
@@ -1264,13 +1264,13 @@ without overwhelming storage, compute, or token budgets.
 
 ### **(Long-Term Architecture Strategy & Upgrade Path)**
 
-This appendix defines how the WorldOS tech stack evolves as data volume, modeling complexity, and user expectations increase. It ensures that early architectural decisions remain compatible with long-term scale without premature complexity.
+This appendix defines how the Chrona tech stack evolves as data volume, modeling complexity, and user expectations increase. It ensures that early architectural decisions remain compatible with long-term scale without premature complexity.
 
 ---
 
 # **B.1 Design Philosophy**
 
-WorldOS is intentionally staged:
+Chrona is intentionally staged:
 
 * **v0.1–v0.2:** Infrastructure stabilization
 
@@ -1626,7 +1626,7 @@ Never introduce new infrastructure until:
 
 3. The added complexity clearly outweighs maintenance cost.
 
-WorldOS must remain:
+Chrona must remain:
 
 * Lean
 
@@ -1665,4 +1665,5 @@ This approach balances:
 * Open-source integrity
 
 * Long-term scalability
+
 

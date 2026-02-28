@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { Separator } from "@radix-ui/react-separator";
 
 const navigation = [
@@ -18,10 +18,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <div className="mx-auto min-h-screen max-w-[1600px] px-4 py-4 md:px-6 lg:px-8">
       <div className="grid min-h-[calc(100vh-2rem)] gap-4 lg:grid-cols-[240px_minmax(0,1fr)_320px]">
         <aside className="rounded-[32px] border border-white/10 bg-panel p-6 shadow-soft">
-          <p className="text-xs uppercase tracking-[0.35em] text-accent">WorldOS</p>
-          <h1 className="mt-3 text-2xl font-semibold text-ink">World events, markets, and signals</h1>
+          <p className="text-xs uppercase tracking-[0.35em] text-accent">Project Chrona</p>
+          <h1 className="mt-3 text-2xl font-semibold text-ink">Macro events, markets, and signals</h1>
           <p className="mt-3 text-sm text-slate-300">
-            Early version focused on turning public events into watchlist context, explainable market impact, and
+            Early version focused on turning public macro and market events into watchlist context, explainable market impact, and
             reusable signal data.
           </p>
 
@@ -46,7 +46,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <p className="text-xs uppercase tracking-[0.35em] text-warning">How To Read This</p>
           <h2 className="mt-3 text-xl font-semibold text-ink">What this alpha proves</h2>
           <p className="mt-3 text-sm text-slate-300">
-            WorldOS is not forecasting yet. This build proves the path from source intake to normalized events,
+            Chrona is not forecasting yet. This build proves the path from source intake to normalized events,
             watchlist context, and explainable impact previews.
           </p>
           <Separator className="my-6 h-px w-full bg-white/10" />
