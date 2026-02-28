@@ -1,11 +1,7 @@
-import { readFile } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
-
 import { instrumentSchema, type Instrument } from "@worldos/core-schema";
+import records from "../fixtures/prices.json";
 
-import type { Connector } from "./interface.js";
-
-const fixturePath = fileURLToPath(new URL("../fixtures/prices.json", import.meta.url));
+import type { Connector } from "./interface";
 
 type PricesFixtureRecord = {
   symbol: string;
@@ -19,10 +15,7 @@ export const getPricesConnector = (): Connector<Instrument> => ({
   id: "market-prices-fixture",
   description: "ETF price connector for alpha validation backed by local JSON fixtures.",
   async fetch() {
-    const raw = await readFile(fixturePath, "utf8");
-    const records = JSON.parse(raw) as PricesFixtureRecord[];
-
-    return records.map((record) =>
+    return (records as PricesFixtureRecord[]).map((record) =>
       instrumentSchema.parse({
         id: `instrument-${record.symbol.toLowerCase()}`,
         symbol: record.symbol,

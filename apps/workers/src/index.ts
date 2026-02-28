@@ -9,7 +9,7 @@ const bootstrap = async () => {
     "prices-ingest",
     { cycleKey },
     {
-      jobId: `prices:${cycleKey}`,
+      jobId: `prices-${cycleKey}`,
       removeOnComplete: 100,
       removeOnFail: 100,
     },
@@ -19,7 +19,7 @@ const bootstrap = async () => {
     "macro-ingest",
     { cycleKey },
     {
-      jobId: `macro:${cycleKey}`,
+      jobId: `macro-${cycleKey}`,
       removeOnComplete: 100,
       removeOnFail: 100,
     },

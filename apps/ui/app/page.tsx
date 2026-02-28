@@ -18,13 +18,22 @@ export default async function HomePage() {
       <div className="rounded-3xl border border-white/10 bg-panel p-6 shadow-soft">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Timeline Overlay</p>
-            <h2 className="mt-2 text-xl font-semibold text-ink">Macro events against instrument drift</h2>
+            <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Impact Preview</p>
+            <h2 className="mt-2 text-xl font-semibold text-ink">Possible catalysts behind watchlist moves</h2>
           </div>
           <p className="max-w-lg text-right text-sm text-slate-300">
-            Overlaying normalized macro events on a compact market proxy view is enough to validate the UX spine for
-            the alpha.
+            This alpha view pins sample macro events next to selected ETF moves to preview how WorldOS will explain
+            market impact. It is contextual for now, not yet a measured causal model.
           </p>
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-3 text-xs text-slate-300">
+          <span className="rounded-full border border-white/10 bg-panelAlt px-3 py-1">
+            Line: current watchlist ETF snapshot
+          </span>
+          <span className="rounded-full border border-accent/30 bg-[rgba(105,210,177,0.08)] px-3 py-1">
+            Event tag: possible catalyst attached to that move
+          </span>
         </div>
 
         <div className="mt-6">
@@ -51,7 +60,7 @@ export default async function HomePage() {
         </div>
 
         <div className="rounded-3xl border border-white/10 bg-panel p-6 shadow-soft">
-          <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Instrument Board</p>
+          <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Watchlist</p>
           <div className="mt-4 space-y-3">
             {dashboard.instruments.slice(0, 6).map((instrument) => (
               <div key={instrument.id} className="flex items-center justify-between rounded-2xl bg-panelAlt px-4 py-3">

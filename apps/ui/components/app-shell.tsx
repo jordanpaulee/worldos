@@ -8,8 +8,8 @@ const navigation = [
 ];
 
 const inspectorNotes = [
-  "Fixture-backed prices connector for SPY and sector ETFs.",
-  "Macro connector is provider-pluggable and currently seeded with placeholder events.",
+  "Using sample ETF data for now.",
+  "Economic event feed is a placeholder and can be swapped later.",
   "API and worker layers share normalized schemas from @worldos/core-schema."
 ];
 
@@ -21,7 +21,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <p className="text-xs uppercase tracking-[0.35em] text-accent">WorldOS</p>
           <h1 className="mt-3 text-2xl font-semibold text-ink">Public world graph</h1>
           <p className="mt-3 text-sm text-slate-300">
-            Infrastructure-first alpha for event ingestion, normalization, and overlay analysis.
+            Early version focused on core data flow for event ingestion, normalization, and overlay analysis.
           </p>
 
           <nav className="mt-8 space-y-2">
