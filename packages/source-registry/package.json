@@ -1,5 +1,5 @@
-{
-  "name": "@worldos/source-registry",
+﻿{
+  "name": "@chrona/source-registry",
   "private": true,
   "version": "0.1.0-alpha",
   "type": "module",
@@ -12,10 +12,10 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "tsc --noEmit -p tsconfig.json",
-    "test": "node -e \"console.log('No tests yet for @worldos/source-registry')\""
+    "test": "node -e \"console.log('No tests yet for @chrona/source-registry')\""
   },
   "dependencies": {
-    "@worldos/core-schema": "workspace:*",
+    "@chrona/core-schema": "workspace:*",
     "yaml": "^2.7.0"
   },
   "devDependencies": {

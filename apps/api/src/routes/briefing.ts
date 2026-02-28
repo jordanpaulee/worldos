@@ -1,4 +1,4 @@
-import type { FastifyInstance } from "fastify";
+﻿import type { FastifyInstance } from "fastify";
 import { z } from "zod";
 
 const dailyBriefingResponseSchema = z.object({
@@ -25,8 +25,8 @@ type DailyBriefingResponse = z.infer<typeof dailyBriefingResponseSchema>;
 
 export const registerBriefingRoutes = (server: FastifyInstance) => {
   server.get<{ Reply: DailyBriefingResponse }>("/briefing/daily", async () => {
-    const instruments = await server.worldos.pricesConnector.fetch();
-    const events = await server.worldos.macroConnector.fetch();
+    const instruments = await server.chrona.pricesConnector.fetch();
+    const events = await server.chrona.macroConnector.fetch();
 
     return dailyBriefingResponseSchema.parse({
       generatedAt: new Date().toISOString(),

@@ -1,4 +1,4 @@
-import { getMacroCalendarConnector, getPricesConnector } from "@worldos/connectors";
+﻿import { getMacroCalendarConnector, getPricesConnector } from "@chrona/connectors";
 import {
   featureSchema,
   signalSchema,
@@ -8,7 +8,7 @@ import {
   type Instrument,
   type Signal,
   type WatchlistImpact,
-} from "@worldos/core-schema";
+} from "@chrona/core-schema";
 
 type ImpactBlueprint = {
   instrumentSymbol: string;
@@ -375,7 +375,7 @@ export const buildDailyViewModel = async (): Promise<DailyViewModel> => {
   const [instruments, events] = await Promise.all([pricesConnector.fetch(), macroConnector.fetch()]);
 
   return {
-    lead: "A sample morning snapshot of the watchlist, the public events most likely to matter, and the signals WorldOS is preparing to rank over time.",
+    lead: "A sample morning snapshot of the watchlist, the public events most likely to matter, and the signals Chrona is preparing to rank over time.",
     marketSnapshot: instruments.slice(0, 3),
     eventHighlights: events.slice(0, 4),
   };

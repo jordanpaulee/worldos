@@ -1,13 +1,13 @@
-{
-  "name": "worldos",
+﻿{
+  "name": "chrona",
   "private": true,
   "version": "0.1.0-alpha",
   "packageManager": "pnpm@10.0.0",
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "dev:api": "turbo run dev --filter=@worldos/api",
-    "dev:ui": "turbo run dev --filter=@worldos/ui",
-    "dev:workers": "turbo run dev --filter=@worldos/workers",
+    "dev:api": "turbo run dev --filter=@chrona/api",
+    "dev:ui": "turbo run dev --filter=@chrona/ui",
+    "dev:workers": "turbo run dev --filter=@chrona/workers",
     "dev:infra": "docker compose -f infra/docker/docker-compose.yml up -d",
     "build": "turbo run build",
     "lint": "turbo run lint",

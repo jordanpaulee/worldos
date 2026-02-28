@@ -1,8 +1,8 @@
-import { readFileSync } from "node:fs";
+﻿import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import YAML from "yaml";
 
-import { sourceSchema, type Source } from "@worldos/core-schema";
+import { sourceSchema, type Source } from "@chrona/core-schema";
 
 const registryPath = fileURLToPath(new URL("../registry.yaml", import.meta.url));
 

@@ -1,4 +1,4 @@
-import { buildDashboardViewModel } from "../../lib/view-models";
+﻿import { buildDashboardViewModel } from "../../lib/view-models";
 
 export default async function InstrumentsPage() {
   const dashboard = await buildDashboardViewModel();
@@ -9,7 +9,7 @@ export default async function InstrumentsPage() {
         <p className="text-xs uppercase tracking-[0.3em] text-accent">Watchlist</p>
         <h1 className="text-3xl font-semibold text-ink">Tracked targets for market-impact monitoring</h1>
         <p className="max-w-3xl text-sm text-slate-300">
-          These are the broad, sector, and macro-sensitive instruments WorldOS uses to anchor early impact reads.
+          These are the broad, sector, and macro-sensitive instruments Chrona uses to anchor early impact reads.
         </p>
       </header>
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

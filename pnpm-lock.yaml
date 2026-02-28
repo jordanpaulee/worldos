@@ -14,13 +14,13 @@ importers:
 
   apps/api:
     dependencies:
-      '@worldos/connectors':
+      '@chrona/connectors':
         specifier: workspace:*
         version: link:../../packages/connectors
-      '@worldos/core-schema':
+      '@chrona/core-schema':
         specifier: workspace:*
         version: link:../../packages/core-schema
-      '@worldos/source-registry':
+      '@chrona/source-registry':
         specifier: workspace:*
         version: link:../../packages/source-registry
       fastify:
@@ -42,18 +42,18 @@ importers:
 
   apps/ui:
     dependencies:
+      '@chrona/connectors':
+        specifier: workspace:*
+        version: link:../../packages/connectors
+      '@chrona/core-schema':
+        specifier: workspace:*
+        version: link:../../packages/core-schema
       '@radix-ui/react-separator':
         specifier: ^1.1.2
         version: 1.1.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@tanstack/react-query':
         specifier: ^5.66.0
         version: 5.90.21(react@19.2.4)
-      '@worldos/connectors':
-        specifier: workspace:*
-        version: link:../../packages/connectors
-      '@worldos/core-schema':
-        specifier: workspace:*
-        version: link:../../packages/core-schema
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -100,10 +100,10 @@ importers:
 
   apps/workers:
     dependencies:
-      '@worldos/connectors':
+      '@chrona/connectors':
         specifier: workspace:*
         version: link:../../packages/connectors
-      '@worldos/core-schema':
+      '@chrona/core-schema':
         specifier: workspace:*
         version: link:../../packages/core-schema
       bullmq:
@@ -125,10 +125,10 @@ importers:
 
   packages/connectors:
     dependencies:
-      '@worldos/core-schema':
+      '@chrona/core-schema':
         specifier: workspace:*
         version: link:../core-schema
-      '@worldos/source-registry':
+      '@chrona/source-registry':
         specifier: workspace:*
         version: link:../source-registry
     devDependencies:
@@ -151,13 +151,16 @@ importers:
 
   packages/db:
     devDependencies:
+      '@types/node':
+        specifier: ^22.13.8
+        version: 22.19.13
       typescript:
         specifier: ^5.7.3
         version: 5.9.3
 
   packages/source-registry:
     dependencies:
-      '@worldos/core-schema':
+      '@chrona/core-schema':
         specifier: workspace:*
         version: link:../core-schema
       yaml:

@@ -1,4 +1,4 @@
-import { TimelineChart } from "../components/timeline-chart";
+﻿import { TimelineChart } from "../components/timeline-chart";
 import { buildDashboardViewModel } from "../lib/view-models";
 
 const getConfidenceTone = (label: string) => {
@@ -33,12 +33,12 @@ export default async function HomePage() {
   return (
     <section className="space-y-6">
       <header className="space-y-3">
-        <p className="text-xs uppercase tracking-[0.3em] text-accent">WorldOS v0.1-alpha</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-accent">Project Chrona v0.1-alpha</p>
         <h1 className="max-w-4xl text-3xl font-semibold text-ink">
           See which public events may matter, which watchlist names moved, and which signals are starting to form.
         </h1>
         <p className="max-w-3xl text-sm text-slate-300">
-          WorldOS turns public events and market snapshots into an early market-impact workspace. This alpha uses
+          Chrona turns public macro events and market snapshots into a structured awareness workspace. This alpha uses
           sample data, but the product shape is already visible: event intake, watchlist context, and ranked signals
           that can later become evidence-backed briefings and alerts.
         </p>
@@ -75,7 +75,7 @@ export default async function HomePage() {
             </div>
           </div>
           <p className="max-w-md text-right text-sm text-slate-300">
-            Bars show sample same-day ETF moves. Numbered markers point to the event WorldOS would flag for follow-up.
+            Bars show sample same-day ETF moves. Numbered markers point to the event Chrona would flag for follow-up.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default async function HomePage() {
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Potential Impact Reads</p>
-              <h2 className="mt-2 text-xl font-semibold text-ink">What WorldOS would tell you to investigate</h2>
+              <h2 className="mt-2 text-xl font-semibold text-ink">What Chrona would tell you to investigate</h2>
             </div>
             <p className="max-w-xs text-right text-sm text-slate-300">
               These are sample hypotheses linking a public event to a watchlist move.

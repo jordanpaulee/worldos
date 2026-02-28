@@ -1,5 +1,5 @@
-{
-  "name": "@worldos/workers",
+﻿{
+  "name": "@chrona/workers",
   "private": true,
   "version": "0.1.0-alpha",
   "type": "module",
@@ -7,11 +7,11 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc -p tsconfig.json",
     "lint": "tsc --noEmit -p tsconfig.json",
-    "test": "node -e \"console.log('No tests yet for @worldos/workers')\""
+    "test": "node -e \"console.log('No tests yet for @chrona/workers')\""
   },
   "dependencies": {
-    "@worldos/connectors": "workspace:*",
-    "@worldos/core-schema": "workspace:*",
+    "@chrona/connectors": "workspace:*",
+    "@chrona/core-schema": "workspace:*",
     "bullmq": "^5.41.5",
     "ioredis": "^5.4.2"
   },

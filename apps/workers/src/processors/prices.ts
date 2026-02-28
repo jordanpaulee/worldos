@@ -1,6 +1,6 @@
-import { createHash } from "node:crypto";
+﻿import { createHash } from "node:crypto";
 import type { Job } from "bullmq";
-import { getPricesConnector } from "@worldos/connectors";
+import { getPricesConnector } from "@chrona/connectors";
 
 export const processPricesIngest = async (job: Job<{ cycleKey: string }>) => {
   const connector = getPricesConnector();

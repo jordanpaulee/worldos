@@ -1,4 +1,4 @@
-export const migrationFiles = [
+﻿export const migrationFiles = [
   "001_sources.sql",
   "002_instruments.sql",
   "003_entities.sql",
@@ -8,4 +8,4 @@ export const migrationFiles = [
 ] as const;
 
 export const getDatabaseUrl = () =>
-  process.env.DATABASE_URL ?? "postgres://postgres:postgres@localhost:5432/worldos";
+  process.env.DATABASE_URL ?? "postgres://postgres:postgres@localhost:5432/chrona";
