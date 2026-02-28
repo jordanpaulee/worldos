@@ -27,15 +27,17 @@ const getStatusTone = (status: "watching" | "active" | "cooling") => {
 
 export default async function HomePage() {
   const dashboard = await buildDashboardViewModel();
+  const topImpacts = dashboard.impacts.slice(0, 3);
+  const topSignals = dashboard.signals.slice(0, 2);
 
   return (
-    <section className="space-y-8">
+    <section className="space-y-6">
       <header className="space-y-3">
         <p className="text-xs uppercase tracking-[0.3em] text-accent">WorldOS v0.1-alpha</p>
         <h1 className="max-w-4xl text-3xl font-semibold text-ink">
           See which public events may matter, which watchlist names moved, and which signals are starting to form.
         </h1>
-        <p className="max-w-4xl text-sm text-slate-300">
+        <p className="max-w-3xl text-sm text-slate-300">
           WorldOS turns public events and market snapshots into an early market-impact workspace. This alpha uses
           sample data, but the product shape is already visible: event intake, watchlist context, and ranked signals
           that can later become evidence-backed briefings and alerts.
@@ -53,37 +55,55 @@ export default async function HomePage() {
       </div>
 
       <div className="rounded-3xl border border-white/10 bg-panel p-6 shadow-soft">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-start justify-between gap-4">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Watchlist Impact Preview</p>
             <h2 className="mt-2 text-xl font-semibold text-ink">Possible catalysts behind observed moves</h2>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-300">
+              <span className="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-amber-400/10 px-3 py-1.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                Active
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/10 px-3 py-1.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
+                Watching
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-300/15 bg-slate-300/10 px-3 py-1.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-slate-300/70" />
+                Cooling
+              </span>
+            </div>
           </div>
-          <p className="max-w-lg text-right text-sm text-slate-300">
-            Bars show sample same-day ETF moves. Each catalyst tag marks the public event WorldOS would surface as a
-            likely explanation to investigate next. This is still contextual, not yet a measured causal model.
+          <p className="max-w-md text-right text-sm text-slate-300">
+            Bars show sample same-day ETF moves. Numbered markers point to the event WorldOS would flag for follow-up.
           </p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-3 text-xs text-slate-300">
-          <span className="rounded-full border border-white/10 bg-panelAlt px-3 py-1">
-            Bar: observed move in the watchlist
-          </span>
-          <span className="rounded-full border border-accent/30 bg-[rgba(105,210,177,0.08)] px-3 py-1">
-            Tag: event WorldOS would flag as a possible catalyst
-          </span>
-          <span className="rounded-full border border-white/10 bg-panelAlt px-3 py-1">
-            Goal: explain what changed before forecasting what comes next
-          </span>
         </div>
 
         <div className="mt-6">
           <TimelineChart points={dashboard.impactPreview} />
         </div>
+
+        <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {topImpacts.map((impact, index) => (
+            <article key={impact.id} className="rounded-2xl border border-white/10 bg-panelAlt px-4 py-4">
+              <div className="flex items-start gap-3">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent font-semibold text-bg">
+                  {index + 1}
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-400">{impact.instrumentSymbol}</p>
+                  <h3 className="mt-1 font-medium text-ink">{impact.eventTitle}</h3>
+                  <p className="mt-2 text-sm text-slate-300">{impact.narrative}</p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-[1.1fr_0.9fr_0.8fr]">
+      <div className="grid gap-4 xl:grid-cols-[1.2fr_0.8fr]">
         <div className="rounded-3xl border border-white/10 bg-panel p-6 shadow-soft">
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Potential Impact Reads</p>
               <h2 className="mt-2 text-xl font-semibold text-ink">What WorldOS would tell you to investigate</h2>
@@ -93,7 +113,7 @@ export default async function HomePage() {
             </p>
           </div>
           <div className="mt-4 space-y-4">
-            {dashboard.impacts.map((impact) => (
+            {topImpacts.map((impact) => (
               <article key={impact.id} className="rounded-2xl border border-white/10 bg-panelAlt p-4">
                 <div className="flex items-start justify-between gap-3">
                   <div>
@@ -147,7 +167,7 @@ export default async function HomePage() {
             <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Signals Taking Shape</p>
             <h2 className="mt-2 text-xl font-semibold text-ink">Patterns that may become ranked signals later</h2>
             <div className="mt-4 space-y-4">
-              {dashboard.signals.map((signal) => (
+              {topSignals.map((signal) => (
                 <article key={signal.id} className="rounded-2xl border border-white/10 bg-panelAlt p-4">
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="font-medium text-ink">{signal.title}</h3>
@@ -185,29 +205,6 @@ export default async function HomePage() {
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-panel p-6 shadow-soft">
-            <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Market Context</p>
-            <h2 className="mt-2 text-xl font-semibold text-ink">Shared features behind the signal layer</h2>
-            <div className="mt-4 space-y-3">
-              {dashboard.features.map((feature) => (
-                <article key={feature.id} className="rounded-2xl border border-white/10 bg-panelAlt px-4 py-4">
-                  <div className="flex items-center justify-between gap-3">
-                    <div>
-                      <p className="text-sm font-medium text-ink">{feature.label}</p>
-                      <p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-400">{feature.kind.replaceAll("_", " ")}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-lg font-semibold text-ink">{feature.value.toFixed(2)}</p>
-                      <p className="text-xs text-slate-400">{feature.unit}</p>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="space-y-4">
-          <div className="rounded-3xl border border-white/10 bg-panel p-6 shadow-soft">
             <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Recent Events</p>
             <h2 className="mt-2 text-xl font-semibold text-ink">Public catalysts currently in view</h2>
             <div className="mt-4 space-y-4">
@@ -222,28 +219,6 @@ export default async function HomePage() {
                   <p className="mt-2 text-sm text-slate-300">{event.summary}</p>
                   <p className="mt-3 text-xs uppercase tracking-[0.2em] text-slate-400">{event.occurredAt}</p>
                 </article>
-              ))}
-            </div>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-panel p-6 shadow-soft">
-            <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Watchlist</p>
-            <h2 className="mt-2 text-xl font-semibold text-ink">Tracked targets for the alpha</h2>
-            <div className="mt-4 space-y-3">
-              {dashboard.instruments.slice(0, 6).map((instrument) => (
-                <div key={instrument.id} className="flex items-center justify-between rounded-2xl bg-panelAlt px-4 py-3">
-                  <div>
-                    <p className="font-medium text-ink">{instrument.symbol}</p>
-                    <p className="text-xs text-slate-400">{instrument.name}</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-medium text-ink">{instrument.latestPrice.toFixed(2)}</p>
-                    <p className={instrument.changePct >= 0 ? "text-xs text-emerald-300" : "text-xs text-rose-300"}>
-                      {instrument.changePct >= 0 ? "+" : ""}
-                      {instrument.changePct.toFixed(2)}%
-                    </p>
-                  </div>
-                </div>
               ))}
             </div>
           </div>
